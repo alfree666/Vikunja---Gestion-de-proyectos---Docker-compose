@@ -23,9 +23,9 @@ services:
       VIKUNJA_DATABASE_USER: vikunja
       VIKUNJA_DATABASE_DATABASE: vikunja
       VIKUNJA_SERVICE_JWTSECRET: jwt_secret #a super secure random secret
-      VIKUNJA_SERVICE_FRONTENDURL: http://185.253.155.9/ #your public frontend url with slash
+      VIKUNJA_SERVICE_FRONTENDURL: http://localhost:8200/ # localhost, URL publica o tu IP
     ports:
-      - 3456:3456
+      - 8100:3456
     volumes:
       - ./files:/app/vikunja/files
     depends_on:
@@ -35,9 +35,9 @@ services:
   frontend:
     image: vikunja/frontend
     ports:
-      - 80:80
+      - 8200:80
     environment:
-      VIKUNJA_API_URL: http://185.253.155.9:3456/api/v1  # your-ip-here
+      VIKUNJA_API_URL: http://localhost:8100/api/v1  # localhost o tu IP
     restart: unless-stopped
 
     
