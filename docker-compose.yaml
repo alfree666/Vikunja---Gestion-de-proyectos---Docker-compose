@@ -22,9 +22,9 @@ services:
       VIKUNJA_DATABASE_TYPE: mysql
       VIKUNJA_DATABASE_USER: vikunja
       VIKUNJA_DATABASE_DATABASE: vikunja
-#      VIKUNJA_SERVICE_FRONTENDURL: http://185.253.155.9/    # descomentar para modificar: localhost / IP / dominio
-#      VIKUNJA_SERVICE_ENABLEREGISTRATION: 0     # descomentar para eliminar la opción de registrarse
-#      VIKUNJA_SERVICE_ENABLETASKATTACHMENTS: 1  # descomentar para permitir subida archivos
+#      VIKUNJA_SERVICE_FRONTENDURL: http://localhost/    # descomentar para modificar: localhost / IP / dominio
+#      VIKUNJA_SERVICE_ENABLEREGISTRATION: 0             # descomentar para eliminar la opción de registrarse
+#      VIKUNJA_SERVICE_ENABLETASKATTACHMENTS: 1          # descomentar para permitir subida archivos
     volumes: 
       - ./files:/app/vikunja/files
     depends_on:
